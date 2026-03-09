@@ -12,7 +12,7 @@
     "shadowWidth": 0
   },
   "basics": {
-    "name": "Abdul Hameed",
+    "name": "Abdul",
     "headline": "Full Stack Developer",
     "email": "arbazcr77@gmail.com",
     "phone": "9353960854",
@@ -152,7 +152,10 @@
           "grade": "",
           "location": "",
           "period": "2019 - 2023",
-          "website": {"url": "","label": ""},
+          "website": {
+            "url": "",
+            "label": ""
+          },
           "description": ""
         },
         {
@@ -164,26 +167,159 @@
           "grade": "",
           "location": "",
           "period": "2017 - 2019",
-          "website": {"url": "","label": ""},
+          "website": {
+            "url": "",
+            "label": ""
+          },
           "description": ""
         }
       ]
     },
-    "projects": {"title": "Projects","columns": 1,"hidden": false,"items": []},
+    "projects": {
+      "title": "Projects",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
     "skills": {
       "title": "Skills",
       "columns": 1,
       "hidden": false,
       "items": [
-        {"id": "po008pxu5zbyy8pnftkczz5k","hidden": false,"icon": "","name": "Typescript","proficiency": "","level": 0,"keywords": ["TS","Javascript","Programming Language","Libraries","esbuild","swc","webpack","rollup"]},
-        {"id": "hq6luekf5az4p2svxmjveyey","hidden": false,"icon": "","name": "Rust","proficiency": "","level": 0,"keywords": ["Clap","cli","Actix-web","Programming Language"]},
-        {"id": "a1c5vnbzsr8hm9c9lr8m72sb","hidden": false,"icon": "","name": "Golang","proficiency": "","level": 0,"keywords": ["Websockets","Micro-services","gorilla/websocket"]},
-        {"id": "ohrx7xwjg1qwrlbeiicxh2ts","hidden": false,"icon": "","name": "c++","proficiency": "","level": 0,"keywords": ["cpp","Competitive programming","Problem solving"]},
-        {"id": "ibamy0zt8wtzrnwbofzcjfyo","hidden": false,"icon": "","name": "ReactJS","proficiency": "","level": 0,"keywords": ["Hooks","Context","Interceptors","Custom Hooks","Views","Stores","Zustand","Framer-motion"]},
-        {"id": "hu0cumobui6bj4vq476tc54c","hidden": false,"icon": "","name": "Nextjs","proficiency": "","level": 0,"keywords": ["Framework","SSG","SSR","ISR","CSR","Pagespeed Insights"]},
-        {"id": "abf6jzwydte563skbd71g7s8","hidden": false,"icon": "","name": "Solidjs","proficiency": "","level": 0,"keywords": ["Signals","Events","Reactive UI","Performant Views"]},
-        {"id": "ur11lyumqzg2upp3pc9zal8c","hidden": false,"icon": "","name": "Nestjs","proficiency": "","level": 0,"keywords": ["Nodejs","axios","Micro-services","Middlewares"]},
-        {"id": "k55e9uueweh8lhw116t5ba38","hidden": false,"icon": "","name": "PostgreSQL","proficiency": "","level": 0,"keywords": ["Database","Queries","Relations","Indexes"]}
+        {
+          "id": "po008pxu5zbyy8pnftkczz5k",
+          "hidden": false,
+          "icon": "",
+          "name": "Typescript",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "TS",
+            "Javascript",
+            "Programming Language",
+            "Libraries",
+            "esbuild",
+            "swc",
+            "webpack",
+            "rollup"
+          ]
+        },
+        {
+          "id": "hq6luekf5az4p2svxmjveyey",
+          "hidden": false,
+          "icon": "",
+          "name": "Rust",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Clap",
+            "cli",
+            "Actix-web",
+            "Programming Language"
+          ]
+        },
+        {
+          "id": "a1c5vnbzsr8hm9c9lr8m72sb",
+          "hidden": false,
+          "icon": "",
+          "name": "Golang",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Websockets",
+            "Micro-services",
+            "gorilla/websocket"
+          ]
+        },
+        {
+          "id": "ohrx7xwjg1qwrlbeiicxh2ts",
+          "hidden": false,
+          "icon": "",
+          "name": "c++",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "cpp",
+            "Competitive programming",
+            "Problem solving"
+          ]
+        },
+        {
+          "id": "ibamy0zt8wtzrnwbofzcjfyo",
+          "hidden": false,
+          "icon": "",
+          "name": "ReactJS",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Hooks",
+            "Context",
+            "Interceptors",
+            "Custom Hooks",
+            "Views",
+            "Stores",
+            "Zustand",
+            "Framer-motion"
+          ]
+        },
+        {
+          "id": "hu0cumobui6bj4vq476tc54c",
+          "hidden": false,
+          "icon": "",
+          "name": "Nextjs",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Framework",
+            "SSG",
+            "SSR",
+            "ISR",
+            "CSR",
+            "Pagespeed Insights"
+          ]
+        },
+        {
+          "id": "abf6jzwydte563skbd71g7s8",
+          "hidden": false,
+          "icon": "",
+          "name": "Solidjs",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Signals",
+            "Events",
+            "Reactive UI",
+            "Performant Views"
+          ]
+        },
+        {
+          "id": "ur11lyumqzg2upp3pc9zal8c",
+          "hidden": false,
+          "icon": "",
+          "name": "Nestjs",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Nodejs",
+            "axios",
+            "Micro-services",
+            "Middlewares"
+          ]
+        },
+        {
+          "id": "k55e9uueweh8lhw116t5ba38",
+          "hidden": false,
+          "icon": "",
+          "name": "PostgreSQL",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Database",
+            "Queries",
+            "Relations",
+            "Indexes"
+          ]
+        }
       ]
     },
     "languages": {
@@ -191,27 +327,109 @@
       "columns": 5,
       "hidden": false,
       "items": [
-        {"id": "utg2qq2uiz93vh3n9bwzf117","hidden": false,"language": "English","fluency": "","level": 0},
-        {"id": "umyxtwonlirvrqm98o0dodg9","hidden": false,"language": "Hindi","fluency": "","level": 0},
-        {"id": "byp3yqlxw9ctpe51tlmauqzy","hidden": false,"language": "Kannada","fluency": "","level": 0},
-        {"id": "uu4t3hjowe1ekjd8i1x5en6p","hidden": false,"language": "Urdu","fluency": "","level": 0}
+        {
+          "id": "utg2qq2uiz93vh3n9bwzf117",
+          "hidden": false,
+          "language": "English",
+          "fluency": "",
+          "level": 0
+        },
+        {
+          "id": "umyxtwonlirvrqm98o0dodg9",
+          "hidden": false,
+          "language": "Hindi",
+          "fluency": "",
+          "level": 0
+        },
+        {
+          "id": "byp3yqlxw9ctpe51tlmauqzy",
+          "hidden": false,
+          "language": "Kannada",
+          "fluency": "",
+          "level": 0
+        },
+        {
+          "id": "uu4t3hjowe1ekjd8i1x5en6p",
+          "hidden": false,
+          "language": "Urdu",
+          "fluency": "",
+          "level": 0
+        }
       ]
     },
-    "interests": {"title": "Interests","columns": 1,"hidden": false,"items": []},
-    "awards": {"title": "Awards","columns": 1,"hidden": false,"items": []},
+    "interests": {
+      "title": "Interests",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "awards": {
+      "title": "Awards",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
     "certifications": {
       "title": "Certifications",
       "columns": 1,
       "hidden": true,
       "items": [
-        {"id": "q1ia9nlv1ih7fqsmjscsog5o","hidden": true,"title": "Python","issuer": "HackerRank","date": "10 Jun, 2021","website": {"url": "https://www.hackerrank.com/certificates/6fe36ffea206","label": ""},"description": ""},
-        {"id": "s3uzcgwpaxa3qf1y1ve7gr2d","hidden": true,"title": "Javascript","issuer": "HackerRank","date": "10 Jun, 2021","website": {"url": "https://www.hackerrank.com/certificates/93eba9004093","label": ""},"description": ""},
-        {"id": "gp40rdkmcabpid8l4n83kcn6","hidden": true,"title": "Problem Solving","issuer": "HackerRank","date": "22 Feb, 2022","website": {"url": "https://www.hackerrank.com/certificates/4490b2b6c2bb","label": ""},"description": ""}
+        {
+          "id": "q1ia9nlv1ih7fqsmjscsog5o",
+          "hidden": true,
+          "title": "Python",
+          "issuer": "HackerRank",
+          "date": "10 Jun, 2021",
+          "website": {
+            "url": "https://www.hackerrank.com/certificates/6fe36ffea206",
+            "label": ""
+          },
+          "description": ""
+        },
+        {
+          "id": "s3uzcgwpaxa3qf1y1ve7gr2d",
+          "hidden": true,
+          "title": "Javascript",
+          "issuer": "HackerRank",
+          "date": "10 Jun, 2021",
+          "website": {
+            "url": "https://www.hackerrank.com/certificates/93eba9004093",
+            "label": ""
+          },
+          "description": ""
+        },
+        {
+          "id": "gp40rdkmcabpid8l4n83kcn6",
+          "hidden": true,
+          "title": "Problem Solving",
+          "issuer": "HackerRank",
+          "date": "22 Feb, 2022",
+          "website": {
+            "url": "https://www.hackerrank.com/certificates/4490b2b6c2bb",
+            "label": ""
+          },
+          "description": ""
+        }
       ]
     },
-    "publications": {"title": "Publications","columns": 1,"hidden": false,"items": []},
-    "volunteer": {"title": "Volunteering","columns": 1,"hidden": false,"items": []},
-    "references": {"title": "References","columns": 1,"hidden": false,"items": []}
+    "publications": {
+      "title": "Publications",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "volunteer": {
+      "title": "Volunteering",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "references": {
+      "title": "References",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    }
   },
   "customSections": [],
   "metadata": {
@@ -221,25 +439,72 @@
       "pages": [
         {
           "fullWidth": false,
-          "main": ["summary","profiles","experience","projects","interests","awards","volunteer","references","publications"],
+          "main": [
+            "summary",
+            "profiles",
+            "experience",
+            "projects",
+            "interests",
+            "awards",
+            "volunteer",
+            "references",
+            "publications"
+          ],
           "sidebar": []
         },
         {
           "fullWidth": true,
-          "main": ["education","certifications","skills","languages"],
+          "main": [
+            "education",
+            "certifications",
+            "skills",
+            "languages"
+          ],
           "sidebar": []
         }
       ]
     },
-    "css": {"enabled": true,"value": "h4 {\n\tmargin-bottom: 4px;\n}"},
-    "page": {"gapX": 4,"gapY": 6,"marginX": 30,"marginY": 30,"format": "a4","locale": "en-US","hideIcons": false},
+    "css": {
+      "enabled": true,
+      "value": "h4 {\n\tmargin-bottom: 4px;\n}"
+    },
+    "page": {
+      "gapX": 4,
+      "gapY": 6,
+      "marginX": 30,
+      "marginY": 30,
+      "format": "a4",
+      "locale": "en-US",
+      "hideIcons": false
+    },
     "design": {
-      "level": {"icon": "star","type": "circle"},
-      "colors": {"primary": "rgba(71, 85, 105, 1)","text": "rgba(0, 0, 0, 1)","background": "rgba(255, 255, 255, 1)"}
+      "level": {
+        "icon": "star",
+        "type": "circle"
+      },
+      "colors": {
+        "primary": "rgba(71, 85, 105, 1)",
+        "text": "rgba(0, 0, 0, 1)",
+        "background": "rgba(255, 255, 255, 1)"
+      }
     },
     "typography": {
-      "body": {"fontFamily": "Open Sans","fontWeights": ["400"],"fontSize": 10.5,"lineHeight": 1.5},
-      "heading": {"fontFamily": "Open Sans","fontWeights": ["600"],"fontSize": 13.5,"lineHeight": 1.5}
+      "body": {
+        "fontFamily": "Open Sans",
+        "fontWeights": [
+          "400"
+        ],
+        "fontSize": 10.5,
+        "lineHeight": 1.5
+      },
+      "heading": {
+        "fontFamily": "Open Sans",
+        "fontWeights": [
+          "600"
+        ],
+        "fontSize": 13.5,
+        "lineHeight": 1.5
+      }
     },
     "notes": ""
   }
