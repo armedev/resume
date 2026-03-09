@@ -18,6 +18,14 @@ cd <your-repo>
 
 ---
 
+## Generate resume.json from RxResume
+
+If you prefer using the RxResume UI, you can export your resume as JSON and drop it into this repo:
+
+1. Open RxResume and finish editing your resume.
+2. Use the Export → JSON option.
+3. Save the file as `resume.json` in the repo root.
+
 ## Release flow
 
 Tag a release to generate a new PDF:
