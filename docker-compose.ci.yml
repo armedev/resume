@@ -1,0 +1,43 @@
+services:
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_DB: rxresume
+      POSTGRES_USER: rxresume
+      POSTGRES_PASSWORD: rxresume
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U rxresume"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  app:
+    image: amruthpillai/reactive-resume:latest
+    ports:
+      - "3000:3000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      PORT: 3000
+      NODE_ENV: production
+      PUBLIC_URL: http://localhost:3000
+      STORAGE_URL: http://localhost:3000
+      CHROME_TOKEN: chrome_token
+      CHROME_URL: ws://chrome:3000
+      DATABASE_URL: postgresql://rxresume:rxresume@postgres:5432/rxresume
+      ACCESS_TOKEN_SECRET: access_token_secret
+      REFRESH_TOKEN_SECRET: refresh_token_secret
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+  chrome:
+    image: browserless/chrome:latest
+    environment:
+      TOKEN: chrome_token
+      EXIT_ON_HEALTH_FAILURE: "true"
+      PRE_REQUEST_HEALTH_CHECK: "true"

@@ -1,0 +1,246 @@
+{
+  "picture": {
+    "hidden": false,
+    "url": "",
+    "size": 64,
+    "rotation": 0,
+    "aspectRatio": 1,
+    "borderRadius": 0,
+    "borderColor": "rgba(0, 0, 0, 0)",
+    "borderWidth": 0,
+    "shadowColor": "rgba(0, 0, 0, 0.5)",
+    "shadowWidth": 0
+  },
+  "basics": {
+    "name": "Abdul Hameed",
+    "headline": "Full Stack Developer",
+    "email": "arbazcr77@gmail.com",
+    "phone": "9353960854",
+    "location": "Bangalore, India",
+    "website": {
+      "url": "https://arme.dev",
+      "label": "Portfolio"
+    },
+    "customFields": [
+      {
+        "id": "019cd0f7-2f94-75ce-8af4-3e496439c68e",
+        "icon": "github-logo",
+        "text": "https://github.com/armedev",
+        "link": ""
+      }
+    ]
+  },
+  "summary": {
+    "title": "Summary",
+    "columns": 1,
+    "hidden": false,
+    "content": "<p>Full-stack developer who has spent 3+ years turning complex problems into clean, scalable solutions. From building enterprise analytics platforms with <strong>React</strong> and <strong>Next.js</strong> to architecting <strong>microservices</strong> with <strong>NestJS</strong>, <strong>Rust</strong>, and <strong>Golang</strong> - I bring end-to-end ownership to everything I ship. Proven track record of owning large-scale revamps, delivering embeddable API-driven products, and working with <strong>gRPC</strong>, <strong>GraphQL</strong>, <strong>REST</strong>, <strong>PostgreSQL</strong>, and <strong>Docker</strong>. At my best in startups where speed and craftsmanship both matter.</p>"
+  },
+  "sections": {
+    "profiles": {
+      "title": "Profiles",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "cuxj0bouz9hke0fc0b0tesib",
+          "hidden": false,
+          "icon": "github",
+          "network": "Github",
+          "username": "armedev",
+          "website": {
+            "url": "https://github.com/armedev",
+            "label": ""
+          }
+        }
+      ]
+    },
+    "experience": {
+      "title": "Experience",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "019cd0ee-5626-716a-9586-134b07a4e1d3",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": false
+          },
+          "company": "Tursio",
+          "position": "Software Engineer",
+          "location": "Bangalore, India",
+          "period": "June 2025 - Present",
+          "website": {
+            "url": "https://tursio.ai",
+            "label": ""
+          },
+          "description": "<ul><li><p>Orchestrated the <strong>full product and website revamp</strong>, delivering a modernized experience across search, insights, data model, and semantic table interfaces.</p></li><li><p>Boosted <strong>website performance and SEO</strong> by implementing lazy image loading, schema markup, accessibility improvements, and resource page optimizations.</p></li><li><p>Drove <strong>end-to-end feature delivery</strong> across the product - from natural language search and data model enhancements to query validation - enabling enterprise users to extract insights from their databases effortlessly.</p></li><li><p>Shipped <strong>data visualization and analytics UI</strong> including bar graphs, chart filters, and metric tabs, empowering knowledge workers to query and analyze enterprise databases through natural language.</p></li><li><p>Built and launched an <strong>embeddable search portal</strong>, enabling customers to integrate Tursio's AI-powered search directly into their own websites via a simple script tag.</p></li></ul>",
+          "roles": []
+        },
+        {
+          "id": "t7cm8in2iadwo43rs406f9zx",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": false
+          },
+          "company": "Gida Technologies",
+          "position": "Software Developer",
+          "location": "Bangalore, India",
+          "period": "September 2023 - May 2025",
+          "website": {
+            "url": "https://gida.in/",
+            "label": ""
+          },
+          "description": "<ul><li><p>Shipped full-stack web applications for <strong>Max Group</strong> and <strong>HDFC</strong> using <strong>Next.js</strong> and <strong>NestJS</strong>, delivering robust and scalable products used by thousands of enterprise users.</p></li><li><p>Engineered and integrated <strong>RESTful APIs</strong> powering efficient data management, user authentication, and core business workflows across multiple client platforms.</p></li><li><p>Leveraged <strong>Next.js SSR and SSG</strong> to significantly improve application performance, page load times, and SEO across all products.</p></li><li><p>Took end-to-end ownership of multiple products - <strong>AgeEasyByAntara</strong>, <strong>Ergo Self-Help Portal</strong>, and <strong>Convenex Portal</strong> - from development through production deployment.</p></li></ul>",
+          "roles": []
+        },
+        {
+          "id": "sgwvrhepmf3j6quyc9q5mbkg",
+          "hidden": false,
+          "company": "BurdenOff Consultancy Services",
+          "position": "Full-Stack Developer Intern",
+          "location": "Remote",
+          "period": "Feb 2023 - Jun 2023",
+          "website": {
+            "url": "https://burdenoff.com/",
+            "label": ""
+          },
+          "description": "<ul><li><p>Architected a <strong>provider-agnostic payment system</strong> using an adapter pattern, decoupling the platform from any single payment provider and future-proofing the billing infrastructure.</p></li><li><p>Integrated <strong>Stripe</strong> with webhook support and 2-way verification, ensuring secure and reliable transaction validation end-to-end.</p></li><li><p>Built the <strong>PaymentMethod model</strong> enabling users to securely store payment methods and supporting recurring payments independent of the underlying provider.</p></li><li><p>Designed and shipped a seamless <strong>transaction flow</strong> powering the platform's core billing experience.</p></li></ul>",
+          "roles": []
+        },
+        {
+          "id": "iv9pxqv9tgw2xho41rm5cy5s",
+          "hidden": false,
+          "company": "BurdenOff Consultancy Services",
+          "position": "Full-Stack Developer Intern",
+          "location": "Remote",
+          "period": "Jun 2022 - Dec 2022",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "<ul><li><p>Engineered and enhanced multiple core product modules - <strong>Payment</strong>, <strong>Notification</strong>, <strong>Billing/Account</strong>, <strong>Wallet</strong>, <strong>Store</strong>, and <strong>Product</strong> - using <strong>GraphQL</strong>, <strong>TypeScript</strong>, and <strong>ArangoDB</strong>.</p></li><li><p>Designed a <strong>type-safe model architecture</strong> that strengthened security, eliminated potential vulnerabilities, and set a clean foundation for scalable feature development.</p></li><li><p>Delivered end-to-end feature work across a complex multi-module platform, contributing to a consistent and reliable user-facing product experience.</p></li></ul>",
+          "roles": []
+        },
+        {
+          "id": "bohmd5372jicppigk73gqepw",
+          "hidden": false,
+          "company": "NETART-INDIA",
+          "position": "React Developer Intern",
+          "location": "Remote",
+          "period": "Jun 2021 - Jan 2022",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "<ul><li><p>Built an <strong>R&D SEO dashboard</strong> using <strong>React</strong> and <strong>FireCMS</strong>, enabling the team to generate and track SEO reports from a single unified interface.</p></li><li><p>Engineered a <strong>scheduler</strong> to eliminate data capture clashes and automated the entire reporting pipeline using <strong>UIvision</strong> and <strong>App Script API</strong>, significantly reducing manual workload.</p></li></ul>",
+          "roles": []
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "o7qg2uev50o1qcbkwesmukbx",
+          "hidden": false,
+          "school": "Jawaharlal Nehru National College of Engineering",
+          "degree": "B.E.",
+          "area": "Information Technology",
+          "grade": "",
+          "location": "",
+          "period": "2019 - 2023",
+          "website": {"url": "","label": ""},
+          "description": ""
+        },
+        {
+          "id": "xrmlj6ijxorup7breozgmpp7",
+          "hidden": false,
+          "school": "Sri Aurobindo Pre University Independent college",
+          "degree": "PUC",
+          "area": "Science",
+          "grade": "",
+          "location": "",
+          "period": "2017 - 2019",
+          "website": {"url": "","label": ""},
+          "description": ""
+        }
+      ]
+    },
+    "projects": {"title": "Projects","columns": 1,"hidden": false,"items": []},
+    "skills": {
+      "title": "Skills",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {"id": "po008pxu5zbyy8pnftkczz5k","hidden": false,"icon": "","name": "Typescript","proficiency": "","level": 0,"keywords": ["TS","Javascript","Programming Language","Libraries","esbuild","swc","webpack","rollup"]},
+        {"id": "hq6luekf5az4p2svxmjveyey","hidden": false,"icon": "","name": "Rust","proficiency": "","level": 0,"keywords": ["Clap","cli","Actix-web","Programming Language"]},
+        {"id": "a1c5vnbzsr8hm9c9lr8m72sb","hidden": false,"icon": "","name": "Golang","proficiency": "","level": 0,"keywords": ["Websockets","Micro-services","gorilla/websocket"]},
+        {"id": "ohrx7xwjg1qwrlbeiicxh2ts","hidden": false,"icon": "","name": "c++","proficiency": "","level": 0,"keywords": ["cpp","Competitive programming","Problem solving"]},
+        {"id": "ibamy0zt8wtzrnwbofzcjfyo","hidden": false,"icon": "","name": "ReactJS","proficiency": "","level": 0,"keywords": ["Hooks","Context","Interceptors","Custom Hooks","Views","Stores","Zustand","Framer-motion"]},
+        {"id": "hu0cumobui6bj4vq476tc54c","hidden": false,"icon": "","name": "Nextjs","proficiency": "","level": 0,"keywords": ["Framework","SSG","SSR","ISR","CSR","Pagespeed Insights"]},
+        {"id": "abf6jzwydte563skbd71g7s8","hidden": false,"icon": "","name": "Solidjs","proficiency": "","level": 0,"keywords": ["Signals","Events","Reactive UI","Performant Views"]},
+        {"id": "ur11lyumqzg2upp3pc9zal8c","hidden": false,"icon": "","name": "Nestjs","proficiency": "","level": 0,"keywords": ["Nodejs","axios","Micro-services","Middlewares"]},
+        {"id": "k55e9uueweh8lhw116t5ba38","hidden": false,"icon": "","name": "PostgreSQL","proficiency": "","level": 0,"keywords": ["Database","Queries","Relations","Indexes"]}
+      ]
+    },
+    "languages": {
+      "title": "Languages",
+      "columns": 5,
+      "hidden": false,
+      "items": [
+        {"id": "utg2qq2uiz93vh3n9bwzf117","hidden": false,"language": "English","fluency": "","level": 0},
+        {"id": "umyxtwonlirvrqm98o0dodg9","hidden": false,"language": "Hindi","fluency": "","level": 0},
+        {"id": "byp3yqlxw9ctpe51tlmauqzy","hidden": false,"language": "Kannada","fluency": "","level": 0},
+        {"id": "uu4t3hjowe1ekjd8i1x5en6p","hidden": false,"language": "Urdu","fluency": "","level": 0}
+      ]
+    },
+    "interests": {"title": "Interests","columns": 1,"hidden": false,"items": []},
+    "awards": {"title": "Awards","columns": 1,"hidden": false,"items": []},
+    "certifications": {
+      "title": "Certifications",
+      "columns": 1,
+      "hidden": true,
+      "items": [
+        {"id": "q1ia9nlv1ih7fqsmjscsog5o","hidden": true,"title": "Python","issuer": "HackerRank","date": "10 Jun, 2021","website": {"url": "https://www.hackerrank.com/certificates/6fe36ffea206","label": ""},"description": ""},
+        {"id": "s3uzcgwpaxa3qf1y1ve7gr2d","hidden": true,"title": "Javascript","issuer": "HackerRank","date": "10 Jun, 2021","website": {"url": "https://www.hackerrank.com/certificates/93eba9004093","label": ""},"description": ""},
+        {"id": "gp40rdkmcabpid8l4n83kcn6","hidden": true,"title": "Problem Solving","issuer": "HackerRank","date": "22 Feb, 2022","website": {"url": "https://www.hackerrank.com/certificates/4490b2b6c2bb","label": ""},"description": ""}
+      ]
+    },
+    "publications": {"title": "Publications","columns": 1,"hidden": false,"items": []},
+    "volunteer": {"title": "Volunteering","columns": 1,"hidden": false,"items": []},
+    "references": {"title": "References","columns": 1,"hidden": false,"items": []}
+  },
+  "customSections": [],
+  "metadata": {
+    "template": "onyx",
+    "layout": {
+      "sidebarWidth": 35,
+      "pages": [
+        {
+          "fullWidth": false,
+          "main": ["summary","profiles","experience","projects","interests","awards","volunteer","references","publications"],
+          "sidebar": []
+        },
+        {
+          "fullWidth": true,
+          "main": ["education","certifications","skills","languages"],
+          "sidebar": []
+        }
+      ]
+    },
+    "css": {"enabled": true,"value": "h4 {\n\tmargin-bottom: 4px;\n}"},
+    "page": {"gapX": 4,"gapY": 6,"marginX": 30,"marginY": 30,"format": "a4","locale": "en-US","hideIcons": false},
+    "design": {
+      "level": {"icon": "star","type": "circle"},
+      "colors": {"primary": "rgba(71, 85, 105, 1)","text": "rgba(0, 0, 0, 1)","background": "rgba(255, 255, 255, 1)"}
+    },
+    "typography": {
+      "body": {"fontFamily": "Open Sans","fontWeights": ["400"],"fontSize": 10.5,"lineHeight": 1.5},
+      "heading": {"fontFamily": "Open Sans","fontWeights": ["600"],"fontSize": 13.5,"lineHeight": 1.5}
+    },
+    "notes": ""
+  }
+}
