@@ -142,16 +142,36 @@ def main():
     print(f"✅ Resume imported with ID: {resume_id}")
 
     name = basics.get("name") or "Resume"
-    slug = _slugify(name)
-    update_payload = {"json": {"id": resume_id, "name": name, "slug": slug, "tags": []}, "meta": []}
-    _request(
-        "POST",
-        f"{base_url}/api/rpc/resume/update",
-        data=_json_dumps(update_payload),
-        headers={"Content-Type": "application/json"},
-        cookies=cookies,
-        timeout=request_timeout,
-    )
+    base_slug = _slugify(name)
+    slug_candidates = [base_slug, f"{base_slug}-{resume_id[:8]}"]
+    update_ok = False
+    for slug in slug_candidates:
+        update_payload = {"json": {"id": resume_id, "name": name, "slug": slug, "tags": []}, "meta": []}
+        status, body = _request(
+            "POST",
+            f"{base_url}/api/rpc/resume/update",
+            data=_json_dumps(update_payload),
+            headers={"Content-Type": "application/json"},
+            cookies=cookies,
+            timeout=request_timeout,
+        )
+        if status == 200:
+            update_ok = True
+            break
+        try:
+            payload = json.loads(body.decode("utf-8"))
+        except (UnicodeDecodeError, json.JSONDecodeError):
+            payload = None
+        if payload and payload.get("json", {}).get("code") == "RESUME_SLUG_ALREADY_EXISTS":
+            continue
+        print(f"⚠️ Resume update failed with status {status}")
+        try:
+            print(body.decode("utf-8"))
+        except UnicodeDecodeError:
+            print(body)
+        break
+    if not update_ok:
+        print("⚠️ Resume update did not succeed; PDF metadata may use defaults.")
 
     print("🖨️ Exporting PDF...")
     print_payload = {"json": {"id": resume_id}, "meta": []}
