@@ -6,6 +6,7 @@ import sys
 import time
 import urllib.error
 import urllib.request
+import re
 from http.cookiejar import CookieJar
 
 
@@ -27,6 +28,12 @@ def _request(method, url, data=None, headers=None, cookies=None, timeout=20):
 
 def _json_dumps(payload):
     return json.dumps(payload, separators=(",", ":"))
+
+
+def _slugify(value):
+    value = value.strip().lower()
+    value = re.sub(r"[^a-z0-9]+", "-", value)
+    return value.strip("-") or "resume"
 
 
 def _wait_for_health(base_url, timeout_s, interval_s):
@@ -132,6 +139,18 @@ def main():
 
     resume_id = json.loads(body.decode("utf-8"))["json"]
     print(f"✅ Resume imported with ID: {resume_id}")
+
+    name = basics.get("name") or "Resume"
+    slug = _slugify(name)
+    update_payload = {"json": {"id": resume_id, "name": name, "slug": slug, "tags": []}, "meta": []}
+    _request(
+        "POST",
+        f"{base_url}/api/rpc/resume/update",
+        data=_json_dumps(update_payload),
+        headers={"Content-Type": "application/json"},
+        cookies=cookies,
+        timeout=request_timeout,
+    )
 
     print("🖨️ Exporting PDF...")
     print_payload = {"json": {"id": resume_id}, "meta": []}
