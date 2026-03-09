@@ -133,11 +133,16 @@ python3 scripts/generate_pdf.py resume.json output/resume.pdf
 ```
 resume/
 ├── resume.json                  # source of truth — edit this
+├── docker-compose.ci.yml         # local/CI RxResume stack
 ├── output/
 │   └── .gitkeep                 # keep the output directory
+├── .github/
+│   └── workflows/
+│       └── generate.yml          # tag-based PDF generation + Pages
 └── scripts/
     ├── generate_pdf.py          # generates the PDF via RxResume + Docker
     ├── local_pdf.sh             # quick local test runner
+    ├── update_image_digest.sh   # pin latest RxResume image digest
     └── export_pdf.sh            # wrapper for generate_pdf.py
 
 ```
