@@ -27,6 +27,12 @@
         "icon": "github-logo",
         "text": "https://github.com/armedev",
         "link": ""
+      },
+      {
+        "id": "custom-linkedin",
+        "icon": "linkedin-logo",
+        "text": "https://www.linkedin.com/in/abdul-hameed-armedev/",
+        "link": ""
       }
     ]
   },
@@ -79,7 +85,7 @@
             "url": "https://gida.in/",
             "label": ""
           },
-          "description": "<ul><li><p>Shipped full-stack web applications for <strong>Max Group</strong> and <strong>HDFC</strong> using <strong>Next.js</strong> and <strong>NestJS</strong>, serving thousands of enterprise users.</p></li><li><p>Improved performance and SEO across products with <strong>Next.js SSR/SSG</strong> and optimized page delivery.</p></li><li><p>Owned delivery of <strong>AgeEasyByAntara</strong>, <strong>Ergo Self-Help Portal</strong>, and <strong>Convenex Portal</strong> through production.</p></li></ul>",
+          "description": "<ul><li><p>Shipped full-stack web applications for <strong>Max Group</strong> and <strong>HDFC</strong> using <strong>Next.js</strong> and <strong>NestJS</strong>, serving thousands of enterprise users.</p></li><li><p>Engineered <strong>RESTful APIs</strong> for data management, user authentication, and core business workflows across client platforms.</p></li><li><p>Improved performance and SEO across products with <strong>Next.js SSR/SSG</strong> and optimized page delivery.</p></li><li><p>Owned delivery of <strong>AgeEasyByAntara</strong>, <strong>Ergo Self-Help Portal</strong>, and <strong>Convenex Portal</strong> through production.</p></li></ul>",
           "roles": []
         },
         {
@@ -113,7 +119,7 @@
             "url": "",
             "label": ""
           },
-          "description": "<ul><li><p>Built an <strong>R&D SEO dashboard</strong> using <strong>React</strong> and <strong>FireCMS</strong>, enabling the team to generate and track SEO reports from a single unified interface.</p></li><li><p>Engineered a <strong>scheduler</strong> to eliminate data capture clashes and automated the entire reporting pipeline using <strong>UIvision</strong> and <strong>App Script API</strong>, significantly reducing manual workload.</p></li></ul>",
+          "description": "<ul><li><p>Built an <strong>R&D SEO dashboard</strong> using <strong>React</strong> and <strong>FireCMS</strong>, enabling the team to generate and track SEO reports from a single unified interface.</p></li><li><p>Engineered a <strong>scheduler</strong> to eliminate data capture clashes and automated the reporting pipeline using <strong>UIvision</strong> and <strong>App Script API</strong>.</p></li><li><p>Improved report reliability by standardizing data capture flows and reducing manual handoffs.</p></li></ul>",
           "roles": []
         }
       ]
@@ -172,7 +178,7 @@
             "url": "https://github.com/armedev/resume",
             "label": ""
           },
-          "description": "<ul><li><p>Version-controlled resume with automated PDF generation via GitHub Actions and Docker.</p></li><li><p>Tag-based releases publish the PDF to GitHub Pages and GitHub Releases.</p></li><li><p>Stack: <strong>Python</strong>, <strong>Docker</strong>, <strong>GitHub Actions</strong>.</p></li></ul>"
+          "description": "<ul><li><p>Version-controlled resume with automated PDF generation via GitHub Actions and Docker.</p></li><li><p>Tag-based releases publish the PDF to GitHub Pages and GitHub Releases.</p></li><li><p>Designed a reproducible pipeline for resume updates with source-of-truth JSON.</p></li><li><p>Stack: <strong>Python</strong>, <strong>Docker</strong>, <strong>GitHub Actions</strong>.</p></li></ul>"
         },
         {
           "id": "proj-smart-skills",
@@ -186,7 +192,7 @@
             "url": "https://github.com/armedev/smart-skills",
             "label": ""
           },
-          "description": "<ul><li><p>CLI to manage and sync AI agent skill configs across OpenCode, Neovim, Cursor, and Claude Code.</p></li><li><p>Rust-based standalone binary with validation for safe skill formats and zero npm dependencies.</p></li><li><p>Stack: <strong>Rust</strong>, <strong>CLI</strong>.</p></li></ul>"
+          "description": "<ul><li><p>CLI to manage and sync AI agent skill configs across OpenCode, Neovim, Cursor, and Claude Code.</p></li><li><p>Rust-based standalone binary with validation for safe skill formats and zero npm dependencies.</p></li><li><p>Supports global and per-project configuration for consistent team setup.</p></li><li><p>Stack: <strong>Rust</strong>, <strong>CLI</strong>.</p></li></ul>"
         }
       ]
     },
@@ -233,7 +239,8 @@
           "keywords": [
             "WebSockets",
             "Microservices",
-            "gorilla/websocket"
+            "gorilla/websocket",
+            "charm"
           ]
         },
         {
