@@ -65,6 +65,17 @@ def main():
     cookies = CookieJar()
 
     print("📝 Registering CI user...")
+    host = base_url.split("//", 1)[-1]
+    scheme = base_url.split("://", 1)[0]
+    auth_headers = {
+        "Content-Type": "application/json",
+        "Origin": base_url,
+        "Referer": f"{base_url}/",
+        "Host": host,
+        "X-Forwarded-Host": host,
+        "X-Forwarded-Proto": scheme,
+    }
+
     sign_up_payload = {
         "name": "CI User",
         "username": username,
@@ -77,7 +88,7 @@ def main():
         "POST",
         f"{base_url}/api/auth/sign-up/email",
         data=_json_dumps(sign_up_payload),
-        headers={"Content-Type": "application/json"},
+        headers=auth_headers,
         cookies=cookies,
         timeout=request_timeout,
     )
@@ -88,7 +99,7 @@ def main():
         "POST",
         f"{base_url}/api/auth/sign-in/email",
         data=_json_dumps(sign_in_payload),
-        headers={"Content-Type": "application/json"},
+        headers=auth_headers,
         cookies=cookies,
         timeout=request_timeout,
     )
