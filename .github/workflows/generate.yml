@@ -15,26 +15,6 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Restore Docker image cache
-        id: docker-cache
-        uses: actions/cache@v4
-        with:
-          path: /tmp/docker-images.tar
-          key: docker-images-${{ runner.os }}-v1-f8e8ec1321049ee2763453f3df4d414b012e5dcf92d3724ef86e9bbd8a55e708
-
-      - name: Load cached Docker images
-        if: steps.docker-cache.outputs.cache-hit == 'true'
-        run: docker load -i /tmp/docker-images.tar
-
-      - name: Pull Docker images
-        if: steps.docker-cache.outputs.cache-hit != 'true'
-        run: |
-          IMAGES="postgres:16-alpine ghcr.io/browserless/chromium:v2.18.0 amruthpillai/reactive-resume@sha256:f8e8ec1321049ee2763453f3df4d414b012e5dcf92d3724ef86e9bbd8a55e708"
-          for image in $IMAGES; do
-            docker pull "$image"
-          done
-          docker save $IMAGES -o /tmp/docker-images.tar
-
       - name: Start RxResume stack
         run: |
           docker compose -f docker-compose.ci.yml up -d --wait --wait-timeout 120 app
