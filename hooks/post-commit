@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Get the repo root
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+
+# Only run if resume.json was changed in this commit
+if ! git diff HEAD~1 HEAD --name-only 2>/dev/null | grep -q "resume.json"; then
+  exit 0
+fi
+
+echo "📄 resume.json changed, generating PDF..."
+
+# Check if Docker is running
+if ! docker info > /dev/null 2>&1; then
+  echo "⚠️  Docker is not running — skipping PDF generation."
+  echo "    Start Docker Desktop and run: bash scripts/export_pdf.sh resume.json output/resume.pdf"
+  exit 0
+fi
+
+# Run the export
+cd "$REPO_ROOT"
+bash scripts/export_pdf.sh resume.json output/resume.pdf
+
+if [ $? -ne 0 ]; then
+  echo "❌ PDF generation failed — check the logs above."
+  exit 0
+fi
+
+# Commit the PDF without triggering the hook again
+git add output/resume.pdf
+git commit --no-verify -m "chore: regenerate resume PDF"
+
+echo "✅ Resume PDF committed to output/resume.pdf"

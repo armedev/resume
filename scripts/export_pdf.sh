@@ -3,20 +3,24 @@ set -e
 
 BASE_URL="http://localhost:3000"
 EMAIL="ci@resume.local"
-PASSWORD="ci_password_123"
+PASSWORD="CiPassword123!"
 RESUME_JSON_PATH="${1:-resume.json}"
 OUTPUT_PDF="${2:-output/resume.pdf}"
 
 echo "⏳ Waiting for RxResume to be ready..."
-until curl -sf "$BASE_URL/api/health" > /dev/null; do
-  sleep 3
+for i in {1..30}; do
+  if curl -sf "$BASE_URL/api/health" > /dev/null; then
+    echo "✅ RxResume is up!"
+    break
+  fi
+  echo "Attempt $i/30 - not ready yet..."
+  sleep 5
 done
-echo "✅ RxResume is up!"
 
 echo "📝 Registering CI user..."
-REGISTER_RESPONSE=$(curl -sf -X POST "$BASE_URL/api/auth/register" \
+curl -sf -X POST "$BASE_URL/api/auth/register" \
   -H "Content-Type: application/json" \
-  -d "{\"name\":\"CI User\",\"email\":\"$EMAIL\",\"password\":\"$PASSWORD\"}" || true)
+  -d "{\"name\":\"CI User\",\"email\":\"$EMAIL\",\"password\":\"$PASSWORD\",\"locale\":\"en-US\"}" > /dev/null || true
 
 echo "🔐 Logging in..."
 LOGIN_RESPONSE=$(curl -sf -X POST "$BASE_URL/api/auth/login" \

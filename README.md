@@ -1,18 +1,37 @@
 # Resume
 
-My resume, version-controlled and auto-generated as a PDF on every push.
+My resume, version-controlled and auto-generated as a PDF on every commit.
+
+## Setup
+
+**1. Clone the repo and install the hook:**
+```bash
+git clone <your-repo>
+cd <your-repo>
+bash scripts/setup_hook.sh
+```
+
+**2. Make sure Docker Desktop is installed and running.**
+
+That's it! From now on, every time you commit a change to `resume.json`, a PDF is automatically generated and committed to `output/resume.pdf`.
+
+---
 
 ## How it works
 
-1. Edit `resume.json` (exported from [RxResume](https://rxresume.org))
-2. Push to any branch
-3. GitHub Actions spins up a self-hosted RxResume instance via Docker
-4. Imports the JSON, exports a PDF
-5. Commits `output/resume.pdf` back to the same branch
+```
+edit resume.json → git commit → post-commit hook fires
+→ Docker spins up RxResume → imports JSON → exports PDF
+→ PDF committed to output/resume.pdf → Docker tears down
+```
+
+If Docker isn't running when you commit, the hook skips gracefully and tells you how to generate the PDF manually.
+
+---
 
 ## Branching strategy
 
-Each branch can be a different version of your resume:
+Each branch can be a different tailored version of your resume:
 
 | Branch | Purpose |
 |---|---|
@@ -20,25 +39,31 @@ Each branch can be a different version of your resume:
 | `frontend-focused` | Tailored for frontend roles |
 | `senior-roles` | Tailored for senior positions |
 
-## Local usage
+Every branch has its own PDF history — just `git log output/resume.pdf` to see all versions.
 
-To generate the PDF locally:
+---
+
+## Manual PDF generation
+
+If you need to regenerate the PDF without committing:
 
 ```bash
-# Start the stack
-docker compose -f docker-compose.ci.yml up -d
-
-# Run the export script
+# Make sure Docker is running first
 bash scripts/export_pdf.sh resume.json output/resume.pdf
-
-# Tear down
-docker compose -f docker-compose.ci.yml down
 ```
 
-## Updating your resume
+---
 
-1. Export your resume JSON from RxResume (`Settings → Export → JSON`)
-2. Replace `resume.json` in this repo
-3. Push — PDF is auto-generated and committed
+## Files
 
-Or edit `resume.json` directly and push.
+```
+resume/
+├── resume.json                  # source of truth — edit this
+├── output/
+│   └── resume.pdf               # auto-generated, do not edit manually
+├── hooks/
+│   └── post-commit              # the git hook (source)
+└── scripts/
+    ├── setup_hook.sh            # installs the hook into .git/hooks
+    └── export_pdf.sh            # generates the PDF via RxResume + Docker
+```
