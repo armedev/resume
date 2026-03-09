@@ -60,7 +60,20 @@ edit resume.json → push tag → GitHub Actions runs
 
 ## Manual PDF generation
 
-If you need to regenerate the PDF locally:
+Fast local testing before pushing changes:
+
+```bash
+./scripts/local_pdf.sh
+```
+
+This starts the Docker stack if needed, generates the PDF, and leaves the stack running for faster repeats.
+Stop it when you're done:
+
+```bash
+docker compose -f docker-compose.ci.yml down
+```
+
+If you want to run against an already-running stack:
 
 ```bash
 # Make sure Docker is running first
@@ -78,5 +91,6 @@ resume/
 │   └── .gitkeep                 # keep the output directory
 └── scripts/
     ├── generate_pdf.py          # generates the PDF via RxResume + Docker
+    ├── local_pdf.sh             # quick local test runner
     └── export_pdf.sh            # wrapper for generate_pdf.py
 ```
