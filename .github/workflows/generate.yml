@@ -3,7 +3,7 @@ name: Generate Resume PDF
 on:
   push:
     tags:
-      - "*"
+      - "v*"
 
 jobs:
   generate-pdf:
@@ -14,6 +14,10 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+
+      - name: Guard - verify resume.json exists
+        run: |
+          test -f resume.json || (echo "resume.json missing" && exit 1)
 
       - name: Start RxResume stack
         run: |
