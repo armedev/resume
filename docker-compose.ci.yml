@@ -7,21 +7,9 @@ services:
       POSTGRES_PASSWORD: rxresume
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U rxresume -d rxresume"]
-      interval: 5s
-      timeout: 5s
-      retries: 10
-
-  minio:
-    image: minio/minio:latest
-    command: server /data
-    environment:
-      MINIO_ROOT_USER: minioadmin
-      MINIO_ROOT_PASSWORD: minioadmin
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
-      interval: 5s
-      timeout: 5s
-      retries: 10
+      interval: 2s
+      timeout: 3s
+      retries: 20
 
   chrome:
     image: ghcr.io/browserless/chromium:v2.18.0
@@ -33,13 +21,11 @@ services:
       TOKEN: chrome_token
 
   app:
-    image: amruthpillai/reactive-resume:latest
+    image: amruthpillai/reactive-resume@sha256:f8e8ec1321049ee2763453f3df4d414b012e5dcf92d3724ef86e9bbd8a55e708
     ports:
       - "3000:3000"
     depends_on:
       postgres:
-        condition: service_healthy
-      minio:
         condition: service_healthy
     environment:
       TZ: Etc/UTC
@@ -48,15 +34,7 @@ services:
       PRINTER_APP_URL: http://app:3000
       DATABASE_URL: postgresql://rxresume:rxresume@postgres:5432/rxresume
       AUTH_SECRET: this_is_a_local_ci_secret_32chars_ok
-      STORAGE_ENDPOINT: minio
-      STORAGE_PORT: 9000
-      STORAGE_REGION: us-east-1
-      STORAGE_BUCKET: default
-      STORAGE_ACCESS_KEY: minioadmin
-      STORAGE_SECRET_KEY: minioadmin
-      STORAGE_URL: http://localhost:9000/default
-      STORAGE_USE_SSL: "false"
-      STORAGE_SKIP_BUCKET_CHECK: "false"
+      STORAGE_TYPE: local
       DISABLE_SIGNUPS: "false"
       DISABLE_EMAIL_AUTH: "false"
     healthcheck:

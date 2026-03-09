@@ -44,7 +44,7 @@ If you need to regenerate the PDF locally:
 
 ```bash
 # Make sure Docker is running first
-bash scripts/export_pdf.sh resume.json output/resume.pdf
+python3 scripts/generate_pdf.py resume.json output/resume.pdf
 ```
 
 ---
@@ -57,5 +57,6 @@ resume/
 ├── output/
 │   └── .gitkeep                 # keep the output directory
 └── scripts/
-    └── export_pdf.sh            # generates the PDF via RxResume + Docker
+    ├── generate_pdf.py          # generates the PDF via RxResume + Docker
+    └── export_pdf.sh            # wrapper for generate_pdf.py
 ```
