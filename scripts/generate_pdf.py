@@ -122,6 +122,7 @@ def main():
     print("📤 Importing resume JSON...")
     with open(args.resume_json, "r", encoding="utf-8") as handle:
         resume_data = json.load(handle)
+    basics = resume_data.get("basics", {})
 
     import_payload = {"json": {"data": resume_data}, "meta": []}
     status, body = _request(

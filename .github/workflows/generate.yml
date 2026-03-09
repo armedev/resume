@@ -49,125 +49,20 @@ jobs:
           mkdir -p pages
           cp output/resume.pdf pages/resume.pdf
           echo "resume.arme.dev" > pages/CNAME
-          python3 - <<'PY'
-          import json
-          import os
-          from datetime import datetime, timezone
-
-          with open("resume.json", "r", encoding="utf-8") as handle:
-              resume = json.load(handle)
-
-          basics = resume.get("basics", {})
-          name = basics.get("name", "Resume")
-          headline = basics.get("headline", "")
-          tag = os.environ.get("GITHUB_REF_NAME", "latest")
-          updated = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-
-          title = f"{name} — Resume" if name else "Resume"
-
-          html = f"""<!doctype html>
-          <html lang=\"en\">
+          cat <<'EOF' > pages/index.html
+          <!doctype html>
+          <html lang="en">
             <head>
-              <meta charset=\"utf-8\" />
-              <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
-              <title>{title}</title>
-              <style>
-                :root {{
-                  color-scheme: light;
-                  --bg: #f6f2ec;
-                  --card: #ffffff;
-                  --ink: #1b1b1b;
-                  --muted: #5a5a5a;
-                  --accent: #9b4f2f;
-                }}
-                * {{ box-sizing: border-box; }}
-                body {{
-                  margin: 0;
-                  font-family: "Source Serif 4", "Spectral", "Charter", serif;
-                  background: var(--bg);
-                  color: var(--ink);
-                }}
-                header {{
-                  padding: 28px 20px 10px;
-                }}
-                .wrap {{
-                  max-width: 960px;
-                  margin: 0 auto;
-                }}
-                .title {{
-                  font-size: 28px;
-                  margin: 0 0 6px;
-                }}
-                .headline {{
-                  margin: 0 0 10px;
-                  color: var(--muted);
-                  font-size: 16px;
-                }}
-                .meta {{
-                  font-size: 12px;
-                  color: var(--muted);
-                }}
-                .actions {{
-                  display: flex;
-                  gap: 12px;
-                  flex-wrap: wrap;
-                  margin: 16px 0 8px;
-                }}
-                .btn {{
-                  display: inline-flex;
-                  align-items: center;
-                  gap: 8px;
-                  padding: 10px 14px;
-                  background: var(--accent);
-                  color: #fff;
-                  text-decoration: none;
-                  border-radius: 999px;
-                  font-size: 14px;
-                }}
-                .btn.secondary {{
-                  background: transparent;
-                  color: var(--accent);
-                  border: 1px solid var(--accent);
-                }}
-                .frame-wrap {{
-                  padding: 12px 20px 28px;
-                }}
-                .frame {{
-                  width: 100%;
-                  height: 80vh;
-                  border: 0;
-                  border-radius: 16px;
-                  background: var(--card);
-                  box-shadow: 0 20px 60px rgba(27, 27, 27, 0.12);
-                }}
-                @media (max-width: 720px) {{
-                  .frame {{ height: 75vh; }}
-                }}
-              </style>
+              <meta charset="utf-8" />
+              <meta name="viewport" content="width=device-width, initial-scale=1" />
+              <meta http-equiv="refresh" content="0; url=./resume.pdf" />
+              <title>Resume</title>
             </head>
             <body>
-              <header>
-                <div class=\"wrap\">
-                  <h1 class=\"title\">{name}</h1>
-                  <p class=\"headline\">{headline}</p>
-                  <div class=\"meta\">Release: {tag} · Updated: {updated}</div>
-                  <div class=\"actions\">
-                    <a class=\"btn\" href=\"./resume.pdf\">Download PDF</a>
-                    <a class=\"btn secondary\" href=\"./resume.pdf\" target=\"_blank\" rel=\"noopener\">Open in new tab</a>
-                  </div>
-                </div>
-              </header>
-              <div class=\"frame-wrap\">
-                <div class=\"wrap\">
-                  <iframe class=\"frame\" src=\"./resume.pdf\" title=\"Resume PDF\"></iframe>
-                </div>
-              </div>
+              <p>Redirecting to <a href="./resume.pdf">resume.pdf</a>...</p>
             </body>
-          </html>"""
-
-          with open("pages/index.html", "w", encoding="utf-8") as handle:
-              handle.write(html)
-          PY
+          </html>
+          EOF
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
