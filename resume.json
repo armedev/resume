@@ -13,7 +13,7 @@
   },
   "basics": {
     "name": "Abdul Hameed",
-    "headline": "Full Stack Developer",
+    "headline": "Software Engineer",
     "email": "arbazcr77@gmail.com",
     "phone": "9353960854",
     "location": "Bangalore, India",
@@ -40,13 +40,13 @@
     "title": "Summary",
     "columns": 1,
     "hidden": false,
-    "content": "<p>Full-stack developer with 3+ years building scalable web products and <strong>system design</strong> across <strong>React</strong>/<strong>Next.js</strong> and <strong>NestJS</strong>. Experienced in <strong>microservices</strong> and data platforms using <strong>Rust</strong>/<strong>Golang</strong>, <strong>gRPC</strong>/<strong>GraphQL</strong>/<strong>REST</strong>, <strong>PostgreSQL</strong>, and <strong>Docker</strong>, delivering fast, high-quality results in startup environments.</p>"
+    "content": "<p>Software engineer with <strong>5+ years</strong> building products <strong>end to end</strong> across <strong>Go</strong>, <strong>TypeScript</strong>, and <strong>Rust</strong>, from backend services and <strong>microservices</strong> to <strong>local-first</strong> tooling with <strong>LLM</strong> integration. Experienced with <strong>gRPC</strong>/<strong>GraphQL</strong>/<strong>REST</strong>, <strong>PostgreSQL</strong>/<strong>SQLite</strong>, and <strong>Docker</strong>, delivering fast, high-quality results in startup and enterprise environments.</p>"
   },
   "sections": {
     "profiles": {
       "title": "Profiles",
       "columns": 1,
-      "hidden": false,
+      "hidden": true,
       "items": []
     },
     "experience": {
@@ -54,6 +54,23 @@
       "columns": 1,
       "hidden": false,
       "items": [
+        {
+          "id": "electrolux-2026",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": true
+          },
+          "company": "Electrolux",
+          "position": "Software Engineer",
+          "location": "Bangalore, India",
+          "period": "May 2026 - Present",
+          "website": {
+            "url": "https://www.electrolux.com/",
+            "label": ""
+          },
+          "description": "<ul><li><p>Building <strong>Electrolux's aftermarket e-commerce webshop</strong>.</p></li><li><p>Contributing across the full product lifecycle: design, implementation, testing, and delivery.</p></li></ul>",
+          "roles": []
+        },
         {
           "id": "019cd0ee-5626-716a-9586-134b07a4e1d3",
           "hidden": false,
@@ -63,7 +80,7 @@
           "company": "Tursio",
           "position": "Software Engineer",
           "location": "Bangalore, India",
-          "period": "June 2025 - Present",
+          "period": "June 2025 - Apr 2026",
           "website": {
             "url": "https://tursio.ai",
             "label": ""
@@ -134,7 +151,7 @@
           "hidden": false,
           "school": "Jawaharlal Nehru National College of Engineering",
           "degree": "B.E.",
-          "area": "Information Technology",
+          "area": "Information Science",
           "grade": "",
           "location": "",
           "period": "2019 - 2023",
@@ -167,7 +184,21 @@
       "hidden": false,
       "items": [
         {
-          "id": "proj-resume",
+          "id": "proj-khayal",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": true
+          },
+          "name": "Khayal",
+          "period": "",
+          "website": {
+            "url": "https://khayal.rawnaqs.io",
+            "label": ""
+          },
+          "description": "<ul><li><p>Local-first second brain in <strong>Go</strong>: captures notes via CLI and PWA, processes them with a <strong>local LLM</strong> (Ollama), and stores everything as plain markdown. No accounts, no cloud, no telemetry.</p></li><li><p>Built <strong>hybrid search</strong> combining <strong>SQLite FTS5</strong> keyword matching with embedding-based semantic similarity, fused via <strong>Reciprocal Rank Fusion</strong>.</p></li><li><p>Shipped as two binaries (server + thin client) with the PWA embedded via <code>embed.FS</code>, an offline capture queue, and Homebrew distribution via GoReleaser.</p></li><li><p>Stack: <strong>Go</strong>, <strong>SQLite</strong>, <strong>Ollama</strong>, <strong>PWA</strong>.</p></li></ul>"
+        },
+        {
+          "id": "proj-smart-skills",
           "hidden": false,
           "options": {
             "showLinkInTitle": true
@@ -198,7 +229,7 @@
     },
     "skills": {
       "title": "Skills",
-      "columns": 1,
+      "columns": 3,
       "hidden": false,
       "items": [
         {
@@ -240,7 +271,22 @@
             "WebSockets",
             "Microservices",
             "gorilla/websocket",
-            "charm"
+            "charm",
+            "Ollama",
+            "SQLite"
+          ]
+        },
+        {
+          "id": "docker",
+          "hidden": false,
+          "icon": "",
+          "name": "Docker",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Docker Compose",
+            "Kubernetes",
+            "CI/CD"
           ]
         },
         {
@@ -275,7 +321,7 @@
         },
         {
           "id": "abf6jzwydte563skbd71g7s8",
-          "hidden": false,
+          "hidden": true,
           "icon": "",
           "name": "SolidJS",
           "proficiency": "",
@@ -313,25 +359,39 @@
             "Relations",
             "Database Design"
           ]
+        },
+        {
+          "id": "python-skill",
+          "hidden": false,
+          "icon": "",
+          "name": "Python",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Scripting",
+            "Automation",
+            "CI/CD",
+            "GitHub Actions"
+          ]
         }
       ]
     },
     "languages": {
       "title": "Languages",
       "columns": 5,
-      "hidden": false,
+      "hidden": true,
       "items": []
     },
     "interests": {
       "title": "Interests",
       "columns": 1,
-      "hidden": false,
+      "hidden": true,
       "items": []
     },
     "awards": {
       "title": "Awards",
       "columns": 1,
-      "hidden": false,
+      "hidden": true,
       "items": []
     },
     "certifications": {
@@ -380,19 +440,19 @@
     "publications": {
       "title": "Publications",
       "columns": 1,
-      "hidden": false,
+      "hidden": true,
       "items": []
     },
     "volunteer": {
       "title": "Volunteering",
       "columns": 1,
-      "hidden": false,
+      "hidden": true,
       "items": []
     },
     "references": {
       "title": "References",
       "columns": 1,
-      "hidden": false,
+      "hidden": true,
       "items": []
     }
   },
@@ -429,9 +489,9 @@
     },
     "page": {
       "gapX": 4,
-      "gapY": 6,
+      "gapY": 5,
       "marginX": 30,
-      "marginY": 30,
+      "marginY": 25,
       "format": "a4",
       "locale": "en-US",
       "hideIcons": false
@@ -455,7 +515,7 @@
           "600"
         ],
         "fontSize": 10.5,
-        "lineHeight": 1.5
+        "lineHeight": 1.4
       },
       "heading": {
         "fontFamily": "Open Sans",
